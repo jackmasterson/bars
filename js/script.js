@@ -15,19 +15,35 @@ var model = {
 	},
 	nav: [
 		{
-			header: "Menu"
+			header: "Menu",
+			id: "menu-li"
 		},
 		{
-			header: "Events"
+			header: "Events",
+			id: "events-li"
 		},
 		{
-			header: "Specials"
+			header: "Specials",
+			id: "specials-li"
 		},
 		{
-			header: "Directions"
+			header: "Directions",
+			id: "directions-li"
 		},
 		{
-			header: "About Us"
+			header: "About Us",
+			id: "about-li"
+		}
+	],
+	addInfo: [
+		{
+			address: "444 Philadelphia Blvd",
+			town: "Sea Girt, NJ 08750",
+			map: "Google Maps",
+			href: "https://www.google.com/maps/"+
+				"place/Some+Random+Bar/@47.6155572,-122.3518718,17z/" +
+				"data=!3m1!4b1!4m5!3m4!1s0x5490154e401b4cb3:0x4fef1e810ac"+
+				"1375c!8m2!3d47.6155536!4d-122.3496778"
 		}
 	]
 };
@@ -137,6 +153,12 @@ var toggle = {
 		$('.square-head').fadeOut(function(){
 			$('.square-harrigans').fadeIn();
 		});
+	},
+
+	navigate: function() {
+
+		console.log(this);
+		
 	}
 };
 

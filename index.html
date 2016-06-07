@@ -12,10 +12,20 @@
 		<div class="splash">
 			<div class="nav-div">
 				<ul class="nav-ul" data-bind="foreach: model.nav">
-					<li class="nav-li" data-bind="text: header"></li>
+					<li class="nav-li" data-bind="attr: { 'id': id }, text: header, click: toggle.navigate"></li>
+				</ul>
+			</div>
+			<div class="address" data-bind="foreach: model.addInfo">
+				<ul class="address-ul">
+					<li class="address-li" data-bind="text: address"></li>
+					<li class="address-li" data-bind="text: town"></li>
+					<li class="address-li">
+					 	<a target="_blank" data-bind="text: map, attr: { href: href }"></a>
+					</li>
 				</ul>
 			</div>
 		</div>
+
 	
 	<script src="js/lib/knockout-3.2.0.js"></script>
 	<script src="js/lib/jquery-1.12.4.min.js"></script>

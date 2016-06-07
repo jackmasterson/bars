@@ -9,6 +9,11 @@
     list-style-type: none;
 }
 
+a {
+	color: white;
+	visited: #ccc;
+}
+
 .shade {
 	background-color: rgba(0,0,0,0.5);
 	height: 100%;
@@ -65,6 +70,18 @@
 
 .square-harrigans {
 	display: none;
+}
+
+.address {
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+	width: 30vw;
+	margin: auto auto 40vw auto;
+}
+
+.address-ul {
+	padding-left: 0;
+	border: 1px solid tan;
 }
 
 
