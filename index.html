@@ -8,8 +8,18 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div>Hellow World!</div>
+	
+		<div class="splash">
+			<div class="nav-div">
+				<ul class="nav-ul" data-bind="foreach: model.nav">
+					<li class="nav-li" data-bind="text: header"></li>
+				</ul>
+			</div>
 
+		</div>
+	
+	
+	<script src="js/lib/knockout-3.2.0.js"></script>
 	<script src="js/lib/jquery-1.12.4.min.js"></script>
 	<script src="js/script.js"></script>
 </body>

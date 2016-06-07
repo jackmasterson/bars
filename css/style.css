@@ -1,0 +1,50 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+	font-family: Open Sans;
+	text-align: center;
+	vertical-align: middle;
+    list-style-type: none;
+}
+
+.shade {
+	background-color: rgba(0,0,0,0.5);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 3;
+}
+
+.splash {
+	background: url(..//img/bar.jpg) no-repeat fixed;
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+}
+
+.logo {
+	height: 250px;
+	width: 250px;
+	margin-top: 15vh;
+}
+
+.nav-div {
+	margin-top: 5vh;
+	background-color: rgba(0,0,0,0.7);
+	border: 1px solid tan;
+}
+.nav-li {
+	display: inline-block;
+
+	font-size: 27px;
+	padding: 2%;
+	color: white;
+}
+
+.test {
+	height: 100vh;
+	width: 100vw;
+	background-color: #ccc;
+}
