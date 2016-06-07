@@ -130,5 +130,15 @@ var splashBack = {
 	}
 };
 
+var toggle = {
+
+	square: function() {
+
+		$('.square-head').fadeOut(function(){
+			$('.square-harrigans').fadeIn();
+		});
+	}
+}
+
 
 ko.applyBindings(viewModel.init());
