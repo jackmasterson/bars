@@ -87,7 +87,7 @@ var fourSqView = {
             })
             .done(function(response) {
 
-            	//console.log(response);
+            	console.log(response);
                 var place = response.response.venues[0];
                 console.log(place);
                 var name = place.name;
@@ -138,7 +138,8 @@ var toggle = {
 			$('.square-harrigans').fadeIn();
 		});
 	}
-}
+};
+
 
 
 ko.applyBindings(viewModel.init());
