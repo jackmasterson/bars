@@ -10,6 +10,9 @@
 <body>
 	
 		<div class="splash">
+			<div class="ham-div">
+				<img src="img/hamburger.png" class="hamburger" data-bind="click: toggle.nav">
+			</div>
 			<div class="nav-div">
 				<ul class="nav-ul" data-bind="foreach: model.nav">
 					<li class="nav-li" data-bind="attr: { 'id': id }, text: header, click: toggle.navigate"></li>

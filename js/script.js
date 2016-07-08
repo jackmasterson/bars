@@ -46,7 +46,7 @@ var model = {
 			subDescription: "Jack's is old school. If you're looking for the" +
 				" quintessential bar-and-restaurant experience, the kind of place" + 
 				" where you can always find a smile, meet a neighbor, or have a beer,"+
-				" then we've got some good news for you: you need look no further."
+				" then we've got some good news for you: Jack's has got you covered."
 		}
 	],
 	addInfo: [
@@ -173,10 +173,10 @@ var toggle = {
 
 		console.log(this);
 	//	$('.nav-div').animate({right: '50px'}, 'slow');
-		    $(".nav-div").animate({
-		      opacity: 1,
-		      bottom: "80vh"
-		    }, 'slow');
+		    $(".nav-div").slideToggle();
+
+		    $(".ham-div").fadeIn();
+
 
 		    $(".logo").animate({
 		    	opacity: .8,
@@ -185,6 +185,19 @@ var toggle = {
 		    }, 'slow');
 
 		    $(".info").fadeIn();
+	},
+
+	nav: function() {
+
+		$(".info").fadeOut(function(){
+			$(".nav-div").fadeIn();
+			$(".logo").animate({
+				opacity: 1,
+				top: "0",
+				left: "0"
+			});
+			$(".ham-div").fadeOut();
+		});
 	}
 };
 
