@@ -15,16 +15,14 @@
 					<li class="nav-li" data-bind="attr: { 'id': id }, text: header, click: toggle.navigate"></li>
 				</ul>
 			</div>
-			<div class="address" data-bind="foreach: model.addInfo">
-				<ul class="address-ul">
-					<li class="address-li" data-bind="text: address"></li>
-					<li class="address-li" data-bind="text: town"></li>
-					<li class="address-li">
-					 	<a target="_blank" data-bind="text: map, attr: { href: href }"></a>
-					</li>
-				</ul>
+			<div class="info shade" data-bind="foreach: model.nav">
+				<div class="info-sub" data-bind="if: description">
+					<h1 class="info-head" data-bind="text: description"></h1>
+					<p class="info-par" data-bind="text: subDescription"></p>
+				</div>
 			</div>
 		</div>
+
 
 	
 	<script src="js/lib/knockout-3.2.0.js"></script>

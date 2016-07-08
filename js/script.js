@@ -16,23 +16,37 @@ var model = {
 	nav: [
 		{
 			header: "Menu",
-			id: "menu-li"
+			id: "menu-li",
+			description: ko.observable(false),
+			subDescription: ko.observable(false)
 		},
 		{
 			header: "Events",
-			id: "events-li"
+			id: "events-li",
+			description: ko.observable(false),
+			subDescription: ko.observable(false)
 		},
 		{
 			header: "Specials",
-			id: "specials-li"
+			id: "specials-li",
+			description: ko.observable(false),
+			subDescription: ko.observable(false)
 		},
 		{
 			header: "Directions",
-			id: "directions-li"
+			id: "directions-li",
+			description: ko.observable(false),
+			subDescription: ko.observable(false)
 		},
 		{
 			header: "About Us",
-			id: "about-li"
+			id: "about-li",
+			description: "Jack's isn't just a local restaurant." +
+				" It's a Jersey Shore staple.",
+			subDescription: "Jack's is old school. If you're looking for the" +
+				" quintessential bar-and-restaurant experience, the kind of place" + 
+				" where you can always find a smile, meet a neighbor, or have a beer,"+
+				" then we've got some good news for you: you need look no further."
 		}
 	],
 	addInfo: [
@@ -158,7 +172,19 @@ var toggle = {
 	navigate: function() {
 
 		console.log(this);
-		
+	//	$('.nav-div').animate({right: '50px'}, 'slow');
+		    $(".nav-div").animate({
+		      opacity: 1,
+		      bottom: "80vh"
+		    }, 'slow');
+
+		    $(".logo").animate({
+		    	opacity: .8,
+		    	top: "45vh",
+		    	left: "5vw"
+		    }, 'slow');
+
+		    $(".info").fadeIn();
 	}
 };
 
