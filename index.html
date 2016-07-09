@@ -15,13 +15,15 @@
 			</div>
 			<div class="nav-div">
 				<ul class="nav-ul" data-bind="foreach: model.nav">
-					<li class="nav-li" data-bind="attr: { 'id': id }, text: header, click: toggle.navigate"></li>
+					<li class="nav-li" data-bind="text: header, click: toggle.navigate"></li>
 				</ul>
 			</div>
 			<div class="info shade" data-bind="foreach: model.nav">
-				<div class="info-sub" data-bind="if: description">
-					<h1 class="info-head" data-bind="text: description"></h1>
-					<p class="info-par" data-bind="text: subDescription"></p>
+				<div data-bind="if: description">
+					<div class="more-info" data-bind="attr: { id: classed }">
+						<h1 class="info-head" data-bind="text: description"></h1>
+						<p class="info-par" data-bind="text: subDescription"></p>
+					</div>
 				</div>
 			</div>
 		</div>

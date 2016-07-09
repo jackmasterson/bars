@@ -16,31 +16,31 @@ var model = {
 	nav: [
 		{
 			header: "Menu",
-			id: "menu-li",
-			description: ko.observable(false),
-			subDescription: ko.observable(false)
+			classed: "menu-li",
+			description: 'Menu',
+			subDescription: 'More Menu'
 		},
 		{
 			header: "Events",
-			id: "events-li",
-			description: ko.observable(false),
-			subDescription: ko.observable(false)
+			classed: "events-li",
+			description: "Events",
+			subDescription: "More events"
 		},
 		{
 			header: "Specials",
-			id: "specials-li",
-			description: ko.observable(false),
-			subDescription: ko.observable(false)
+			classed: "specials-li",
+			description: "Specials",
+			subDescription: "More Specials"
 		},
 		{
 			header: "Directions",
-			id: "directions-li",
-			description: ko.observable(false),
-			subDescription: ko.observable(false)
+			classed: "directions-li",
+			description: "Google Maps",
+			subDescription: "More Google Maps"
 		},
 		{
 			header: "About Us",
-			id: "about-li",
+			classed: "about-li",
 			description: "Jack's isn't just a local restaurant." +
 				" It's a Jersey Shore staple.",
 			subDescription: "Jack's is old school. If you're looking for the" +
@@ -171,12 +171,15 @@ var toggle = {
 
 	navigate: function() {
 
-		console.log(this);
+		console.log(this.classed);
+		toggle.classId = '#'+this.classed;
+		console.log(toggle.classId);
 	//	$('.nav-div').animate({right: '50px'}, 'slow');
-		    $(".nav-div").slideToggle();
-
-		    $(".ham-div").fadeIn();
-
+		    $(".nav-div").slideToggle(function(){
+		    	$(".ham-div").fadeIn();
+		    	$(".info").fadeIn();
+		    	$(toggle.classId).fadeIn();
+		    });
 
 		    $(".logo").animate({
 		    	opacity: .8,
@@ -184,19 +187,20 @@ var toggle = {
 		    	left: "5vw"
 		    }, 'slow');
 
-		    $(".info").fadeIn();
+		    
 	},
 
 	nav: function() {
-
-		$(".info").fadeOut(function(){
-			$(".nav-div").fadeIn();
-			$(".logo").animate({
-				opacity: 1,
-				top: "0",
-				left: "0"
-			});
+		$(".logo").animate({
+			opacity: 1,
+			top: "0",
+			left: "40vw"
+		});
+		$(toggle.classId).fadeOut(function(){
+			console.log('faded');
 			$(".ham-div").fadeOut();
+			$(".info").fadeOut();	
+			$(".nav-div").fadeIn();
 		});
 	}
 };
