@@ -19,6 +19,7 @@ var model = {
 			classed: "menu-li",
 			description: 'Menu',
 			subDescription: 'More Menu',
+			specials: ko.observable(false),
 			href: ko.observable(false)
 		},
 		{
@@ -28,13 +29,47 @@ var model = {
 			subDescription: "Book Jack's for any event - we've got lots" +
 				" of space, plenty of different catered menus to choose from" +
 				" and anything you need to throw a rockin' good time!",
+			specials: ko.observable(false),
 			href: ko.observable(false)
 		},
 		{
 			header: "Specials",
 			classed: "specials-li",
 			description: "Specials",
-			subDescription: "More Specials",
+			subDescription: ko.observable(false),
+			specials: 
+			[
+				{
+					day: "Monday",
+					special: "Roasted Clams",
+					price: "$0.50/each",
+					time: "6pm-8pm"
+				},				
+				{
+					day: "Tuesday",
+					special: "Happy Hour",
+					price: "$2 Bud Lights",
+					time: "6pm-8pm"
+				},				
+				{
+					day: "Wednesday",
+					special: "Burger Night",
+					price: "$4.00/burger",
+					time: "6pm-8pm"
+				},
+				{
+					day: "Thursday",
+					special: "Trivia Night",
+					price: "Come test your Smarts!",
+					time: "6pm-8pm"
+				},
+								{
+					day: "Friday",
+					special: "Neighborhood Night",
+					price: "First Drink's On Us",
+					time: "6pm-8pm"
+				}
+			],
 			href: ko.observable(false)
 		},
 		{
@@ -42,6 +77,7 @@ var model = {
 			classed: "directions-li",
 			description: ko.observable(false),
 			subDescription: ko.observable(false),
+			specials: ko.observable(false),
 			href: "https://www.google.com/maps/dir//"+
 				"Rod's+Olde+Irish+Tavern,+507+Washington+Blvd,"+
 				"+Sea+Girt,+NJ+08750/@40.1300264,-74.0422897,17z/data=!"+
@@ -55,6 +91,7 @@ var model = {
 			classed: "about-li",
 			description: "Jack's isn't just a local restaurant." +
 				" It's a Jersey Shore staple.",
+			specials: ko.observable(false),
 			subDescription: "Jack's is old school. If you're looking for the" +
 				" quintessential bar-and-restaurant experience, the kind of place" + 
 				" where you can always find a smile, meet a neighbor, or have a beer,"+

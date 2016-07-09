@@ -23,7 +23,17 @@
 					<div data-bind="if: description">
 					
 						<h1 class="info-head" data-bind="text: description"></h1>
-						<p class="info-par" data-bind="text: subDescription"></p>
+						<p class="info-par" data-bind="if: subDescription"><span data-bind="text: subDescription"></span></p>
+						<div data-bind="if: specials">
+							<div data-bind="foreach: specials">
+								<ul class="specials-ul">
+									<li class="lead-li" data-bind="text: day"></li>
+									<li data-bind="text: special"></li>
+									<li data-bind="text: price"></li>
+									<li data-bind="text: time"></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 					<div data-bind="if: href">
 						<a class="directions-href" target="_blank" data-bind="attr: {href: href}, text: header"></a>

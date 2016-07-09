@@ -133,3 +133,12 @@ a {
 	padding-left: 0;
 }
 
+.specials-ul {
+	display: inline-block;
+}
+
+.lead-li {
+	font-size: 18px;
+	font-weight: bold;
+}
+
