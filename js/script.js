@@ -25,7 +25,9 @@ var model = {
 			header: "Events",
 			classed: "events-li",
 			description: "Events",
-			subDescription: "More events",
+			subDescription: "Book Jack's for any event - we've got lots" +
+				" of space, plenty of different catered menus to choose from" +
+				" and anything you need to throw a rockin' good time!",
 			href: ko.observable(false)
 		},
 		{
@@ -207,14 +209,15 @@ var toggle = {
 			top: "0",
 			left: "40vw"
 		});
-		$(toggle.classId).fadeOut(function(){
-			console.log('faded');
+		
+		
 			$(".ham-div").fadeOut(function(){
 				$(".nav-div").fadeIn();
+				$(toggle.classId).fadeOut();
 			});
 			$(".info").fadeOut();	
 			
-		});
+	
 	}
 };
 
