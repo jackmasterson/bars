@@ -17,8 +17,9 @@ var model = {
 		{
 			header: "Menu",
 			classed: "menu-li",
-			description: "Menu",
-			subDescription: 'More Menu',
+			description: "Check us Out on FourSquare!",
+			subDescription: "You can see our extensive menu of cocktails,"+
+				" sandwiches, and other delectables by clicking the link below.",
 			specials: ko.observable(false),
 			href: ko.observable(false)
 		},
@@ -203,7 +204,7 @@ var fourSqView = {
                 model.fourSqInfo.push({
                 	'Menu': menu
                 });
-                console.log(model.fourSqInfo()[0].Menu);
+                console.log(model.fourSqInfo()[0]);
 
                 clearTimeout(self.squareTimeout);
             });
