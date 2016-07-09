@@ -1,6 +1,6 @@
 var model = {
 
-	fourSqInfo: ko.observableArray([]),
+	fourSqInfo: ko.observableArray(),
 	sections: {
 
 		splash: {
@@ -17,7 +17,7 @@ var model = {
 		{
 			header: "Menu",
 			classed: "menu-li",
-			description: 'Menu',
+			description: "Menu",
 			subDescription: 'More Menu',
 			specials: ko.observable(false),
 			href: ko.observable(false)
@@ -92,7 +92,7 @@ var model = {
 			description: "Jack's isn't just a local restaurant." +
 				" It's a Jersey Shore staple.",
 			specials: ko.observable(false),
-			subDescription: "Jack's is old school. If you're looking for the" +
+			subDescription: "We're old school. If you're looking for the" +
 				" quintessential bar-and-restaurant experience, the kind of place" + 
 				" where you can always find a smile, meet a neighbor, or have a beer,"+
 				" then we've got some good news for you: Jack's has got you covered.",
@@ -141,12 +141,20 @@ var fourSqView = {
     
           //  that.title = place.title;
 
-            that.fourSqURL = 'https://api.foursquare.com/v2/venues/search' +
+            that.fourSqURL = /*"https://api.foursquare.com/v2/venues/"+
+                "4bb9643198c7ef3b78173202/menu";*/
+
+
+//"https://api.foursquare.com/v2/venues/4bb9643198c7ef3b78173202/menu?oauth_token=PRQ1W42NNYQLVRSZKAWSACDRTKJDLOODMQBZPALZZOTYOOPC&v=20160709"
+     
+
+            'https://api.foursquare.com/v2/venues/search' +
                 '?client_id=RBCL5LBJKOUGEV1ZNJ3RMAI0HH1N4L5OSQ4LSMWLF3BRI0UP' +
                 '&client_secret=F0Y45LPMD0O0GBXVNKSTS3H3Q2VCQKEHV3KCYUBLXZFD0OJO' +
                 '&v=20130815' +
                 '&near=Sea Girt, NJ' +
-                '&query=harrigans-pub';
+                '&query=rods-olde-irish-tavern';
+
             //Johnny Mac
             //Porta
             //Stone Pony
@@ -168,7 +176,10 @@ var fourSqView = {
             .done(function(response) {
 
             	console.log(response);
-                var place = response.response.venues[0];
+            
+            	var menu = response.response.venues[0].menu.url;
+            	console.log(menu);
+             /*   var place = response.response.venues[0];
                 console.log(place);
                 var name = place.name;
                 var address = place.location.address;
@@ -186,7 +197,12 @@ var fourSqView = {
                     'sqUrl': sqUrl
                 });
 
-                console.log(model.fourSqInfo()[0]);
+                console.log(model.fourSqInfo()[0]);*/
+
+                model.fourSqInfo.push({
+                	'Menu': menu
+                });
+                console.log(model.fourSqInfo()[0].Menu);
 
                 clearTimeout(self.squareTimeout);
             });

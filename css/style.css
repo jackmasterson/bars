@@ -53,13 +53,14 @@ a {
 .hamburger {
 	cursor: pointer;
 	margin: 0;
+	color: white;
 }
 
 .ham-div {
 	display: none;
 	width: 100vw;
 	height: 30px;
-	background-color: rgba(255,150,55,0.6);
+	background-color: rgba(103,0,0,0.6);
 	border-bottom: 2px solid tan;
 		padding-bottom: 35px;
 }
