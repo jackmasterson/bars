@@ -47,11 +47,6 @@ a {
 }
 
 .hamburger {
-	height: 25px;
-	width: 25px;
-	position: absolute;
-	left: 10px;
-	top: 10px;
 	cursor: pointer;
 }
 

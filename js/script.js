@@ -198,9 +198,11 @@ var toggle = {
 		});
 		$(toggle.classId).fadeOut(function(){
 			console.log('faded');
-			$(".ham-div").fadeOut();
+			$(".ham-div").fadeOut(function(){
+				$(".nav-div").fadeIn();
+			});
 			$(".info").fadeOut();	
-			$(".nav-div").fadeIn();
+			
 		});
 	}
 };
