@@ -118,4 +118,17 @@ a {
 	padding-right: 7.5vw;
 }
 
+.directions-href {
+	font-size: 25px;
+}
+
+.tavern {
+	height: 300px;
+	width: 350px;
+	margin-top: 20px;
+}
+
+.add-info-ul {
+	padding-left: 0;
+}
 

@@ -19,12 +19,23 @@
 				</ul>
 			</div>
 			<div class="info shade" data-bind="foreach: model.nav">
-				<div data-bind="if: description">
-					<div class="more-info" data-bind="attr: { id: classed }">
+				<div class="more-info" data-bind="attr: { id: classed }">
+					<div data-bind="if: description">
+					
 						<h1 class="info-head" data-bind="text: description"></h1>
 						<p class="info-par" data-bind="text: subDescription"></p>
 					</div>
+					<div data-bind="if: href">
+						<a class="directions-href" target="_blank" data-bind="attr: {href: href}, text: header"></a>
+						<br>
+						<img class="tavern" src="img/tavern.jpg">
+						<ul class="add-info-ul" data-bind="foreach: model.addInfo">
+							<li data-bind="text: address"></li>
+							<li data-bind="text: town"></li>
+						</ul>
+					</div>
 				</div>
+
 			</div>
 		</div>
 

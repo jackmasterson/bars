@@ -18,25 +18,35 @@ var model = {
 			header: "Menu",
 			classed: "menu-li",
 			description: 'Menu',
-			subDescription: 'More Menu'
+			subDescription: 'More Menu',
+			href: ko.observable(false)
 		},
 		{
 			header: "Events",
 			classed: "events-li",
 			description: "Events",
-			subDescription: "More events"
+			subDescription: "More events",
+			href: ko.observable(false)
 		},
 		{
 			header: "Specials",
 			classed: "specials-li",
 			description: "Specials",
-			subDescription: "More Specials"
+			subDescription: "More Specials",
+			href: ko.observable(false)
 		},
 		{
 			header: "Directions",
 			classed: "directions-li",
-			description: "Google Maps",
-			subDescription: "More Google Maps"
+			description: ko.observable(false),
+			subDescription: ko.observable(false),
+			href: "https://www.google.com/maps/dir//"+
+				"Rod's+Olde+Irish+Tavern,+507+Washington+Blvd,"+
+				"+Sea+Girt,+NJ+08750/@40.1300264,-74.0422897,17z/data=!"+
+				"4m16!1m7!3m6!1s0x89c187d25f67093f:0x4b0b802b92758162!2sRod's"+
+				"+Olde+Irish+Tavern!3b1!8m2!3d40.1300264!4d-74.040101!4m7!"+
+				"1m0!1m5!1m1!1s0x89c187d25f67093f:0x4b0b802b92758162!2m2!1d"+
+				"-74.040101!2d40.1300264"
 		},
 		{
 			header: "About Us",
@@ -46,7 +56,8 @@ var model = {
 			subDescription: "Jack's is old school. If you're looking for the" +
 				" quintessential bar-and-restaurant experience, the kind of place" + 
 				" where you can always find a smile, meet a neighbor, or have a beer,"+
-				" then we've got some good news for you: Jack's has got you covered."
+				" then we've got some good news for you: Jack's has got you covered.",
+			href: ko.observable(false)
 		}
 	],
 	addInfo: [
