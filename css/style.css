@@ -112,7 +112,9 @@ a {
 	color: white;
 	height: 95vh;
 	width: 100vw;
-	padding: 15vh;
+	padding-top: 15vh;
+	padding-left: 15vw;
+	padding-right: 15vw;
 	display: none;
 	position: absolute;
 }

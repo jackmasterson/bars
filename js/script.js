@@ -25,10 +25,11 @@ var model = {
 		{
 			header: "Events",
 			classed: "events-li",
-			description: "Events",
-			subDescription: "Book Jack's for any event - we've got lots" +
+			description: "Book Jack's for any event - we've got lots" +
 				" of space, plenty of different catered menus to choose from" +
 				" and anything you need to throw a rockin' good time!",
+			subDescription: "For more information, call Jack at" +
+				" jack@fakeEmail.com or call at (999) 999 9999",
 			specials: ko.observable(false),
 			href: ko.observable(false)
 		},
