@@ -15,6 +15,8 @@
 	<div class="slider" data-bind="foreach: slider">
 		<img data-bind="attr: {src: src, 'class': classed}, css: {sliderImg: classed}">
 	</div>
+	<button data-bind="click: shifted.right"><</button>
+	<button data-bind="click: shifted.left">></button>
 	<script src="js/lib/knockout-3.2.0.js"></script>
 	<script src="js/lib/jquery.js"></script>
 	<script src="js/script.js"></script>
