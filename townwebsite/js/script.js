@@ -10,6 +10,7 @@ var slider = [
 	var mid = Math.floor(slider.length/2);
 	console.log(slider[mid].classed);
 
+
 	$(document).ready(function(){ 
 		
 		var classy = document.getElementsByClassName(slider[mid].classed)[0];
@@ -25,6 +26,7 @@ var shifted = {
 	left: function() {
 		var classy = document.getElementsByClassName(slider[mid].classed)[0];
 		$(classy).removeClass('selectedImg');
+
 		if(mid < slider.length - 1){
 			mid = mid + 1;
 		}
@@ -35,12 +37,13 @@ var shifted = {
 		classy = document.getElementsByClassName(slider[mid].classed)[0];
 	
 		$(classy).addClass('selectedImg');
+
 	},
 
 	right: function() {
 		var classy = document.getElementsByClassName(slider[mid].classed)[0];
-		$(classy).removeClass('selectedImg');
 		
+		$(classy).removeClass('selectedImg');
 		mid = mid - 1;
 		if(mid < 0){
 			mid = slider.length - 1;
@@ -49,7 +52,20 @@ var shifted = {
 		var classy = document.getElementsByClassName(slider[mid].classed)[0];
 		$(classy).addClass('selectedImg');
 	}
-}
+};
+
+var setX = {
+
+	init: function() {
+		$(document).ready(function() {
+			console.log($('.sliderImg'));
+
+		})
+		
+	}
+};
+
+setX.init();
 	//setTimeout(shifted, 2000);
 	
 
