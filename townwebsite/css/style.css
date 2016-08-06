@@ -41,9 +41,10 @@ body {
 	margin-right: 5vw;
 }
 
-.slider-img {
+.sliderImg {
 	height: 150px;
 	width: 150px;
 	display: inline;
+	opacity: 0.25;
 }
 
