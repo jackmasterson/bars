@@ -48,3 +48,9 @@ body {
 	opacity: 0.25;
 }
 
+.selectedImg {
+	height: 250px;
+	width: 250px;
+	opacity: 1;
+}
+
