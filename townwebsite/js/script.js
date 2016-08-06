@@ -18,7 +18,24 @@ var slider = [
 		$(classy).css('width', '250px');
 		$(classy).css('opacity', '1');
 
-	})
+	});
+
+	function shifted(){
+		console.log('shift!');
+		console.log(mid);
+		var classy = document.getElementsByClassName(slider[mid].classed)[0];
+		$(classy).css('height', '150px');
+		$(classy).css('width', '150px');
+		$(classy).css('opacity', '0.25');
+		mid  = mid + 1;
+		console.log(mid);
+		classy = document.getElementsByClassName(slider[mid].classed)[0];
+	
+		$(classy).css('height', '250px');
+		$(classy).css('width', '250px');
+		$(classy).css('opacity', '1');
+	};
+	setTimeout(shifted, 2000);
 	
 
 ko.applyBindings();
