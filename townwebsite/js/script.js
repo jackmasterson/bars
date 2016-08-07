@@ -13,10 +13,10 @@ var slider = [
 
 	$(document).ready(function(){ 
 		
-		var classy = document.getElementsByClassName(slider[mid].classed)[0];
-	//	console.log(classy);
+	/*	var classy = document.getElementsByClassName(slider[mid].classed)[0];
+		console.log(classy);
 		$(classy).addClass('selectedImg');
-
+*/
 	});
 
 
@@ -94,20 +94,42 @@ var opacity = {
 
 		});
 	//	console.log(slider.indexOf(num));
-		
+	//	console.log(slider.length - 1);
 		for(var i=0; i<slider.length; i++){
-			console.log(i);
-		//	opacity.mult = i * 0.10;
-			console.log(opacity.mult);
-			console.log(slider[i]);
-			slider[i].opacity = i * 0.10 + 0.045;
-			//return mult;
-		}
-		
 
-		//return mult;
-		//console.log(this);
-		//console.log(num);
+		//	console.log(i);
+			if(i>mid){
+				//console.log(i, 'greater');
+			//	slider[i].opacity = (i, mid);
+			//console.log(i, mid, 'greater');
+			//	console.log(slider[i].opacity, 'greater');
+			}
+			if(i<mid){
+			//	console.log(i, 'less');
+			//	slider[i].opacity = (i + mid);
+			//	console.log(slider[i].opacity, 'less');
+
+			//console.log(i, mid, 'less');
+			}
+			
+		//	console.log(Math.abs(mid - i));
+			var abs = Math.abs(mid - i);
+		//	console.log(abs);
+			var opac = 1 - ((abs * 0.28) + 0.35);
+			
+			console.log(height);
+			var maxHeight = (slider.length * 33);
+			var height = maxHeight - (abs * 20);
+			//var use = 1 - opac;
+		//	console.log(use);
+			slider[i].opacity = opac;
+			slider[i].height = height;
+
+			//console.log(abs);
+			//console.log(abs(mid - i));
+		//	slider[i].opacity = i * 0.10 + 0.045;
+
+		}
 		
 
 	}
