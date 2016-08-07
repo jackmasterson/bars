@@ -8,14 +8,13 @@ var slider = [
 
 
 	var mid = Math.floor(slider.length/2);
-	//console.log(slider[mid].classed);
-
 
 	$(document).ready(function(){ 
 		
 		var classy = document.getElementsByClassName(slider[mid].classed)[0];
 		console.log(classy);
 		$(classy).addClass('selectedImg');
+		
 
 	});
 
@@ -32,24 +31,13 @@ var shifted = {
 		else {
 			mid = 0;
 		}
-	//	$(classy).fadeOut(function(){
-			$(classy).removeClass('selectedImg');
-			classy = document.getElementsByClassName(slider[mid].classed)[0];
-			$(classy).addClass('selectedImg');
-		//	$(classy).fadeIn('slow');
-			
-			
-	
-	//	});
-	//	console.log(slider.indexOf(slider[mid]));
 
+		$(classy).removeClass('selectedImg');
+		classy = document.getElementsByClassName(slider[mid].classed)[0];
+		$(classy).addClass('selectedImg');
 
 	//	setTimeout(shifted.left, 2000);
-		//console.log(slider[mid]);
 
-	//	console.log(num);
-	//	console.log(num * 0.25);
-		//return num;
 		
 
 		
@@ -106,7 +94,7 @@ setX.init();
 
 	//setTimeout(shifted.left, 0);
 	$(document).ready(function() {
-		shifted.left();
+//		shifted.left();
 	})
 //	
 
