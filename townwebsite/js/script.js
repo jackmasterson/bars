@@ -37,7 +37,13 @@ var shifted = {
 		$(classy).addClass('selectedImg');
 
 	//	console.log(slider.indexOf(slider[mid]));
+		var num = slider.indexOf(slider[mid]);
+		//console.log(slider[mid]);
+		//slider.push(slider[mid]);
+		//slider.splice(num, 1);
+		
 	//	setTimeout(shifted.left, 2000);
+
 		
 	},
 
@@ -52,7 +58,8 @@ var shifted = {
 
 		classy = document.getElementsByClassName(slider[mid].classed)[0];
 		$(classy).addClass('selectedImg');
-		$(classy).css('opacity', 1);
+		//$(classy).css('opacity', 1);
+
 
 	}
 };
