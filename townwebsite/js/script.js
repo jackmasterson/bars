@@ -13,10 +13,10 @@ var slider = [
 
 	$(document).ready(function(){ 
 		
-	/*	var classy = document.getElementsByClassName(slider[mid].classed)[0];
+		var classy = document.getElementsByClassName(slider[mid].classed)[0];
 		console.log(classy);
 		$(classy).addClass('selectedImg');
-*/
+
 	});
 
 
@@ -80,62 +80,25 @@ var setX = {
 	}
 };
 
-var opacity = {
+var picDimensions = {
 
 	init: function() {
 
-		var num = slider.indexOf(slider[mid]);
-		slider.forEach(function(each){
-		//	console.log(slider.indexOf(each));
-		//	console.log(each);
-		//	console.log(slider.indexOf(each));
-		//	console.log(slider.indexOf(each));
-		//	return slider.indexOf(each);
-
-		});
-	//	console.log(slider.indexOf(num));
-	//	console.log(slider.length - 1);
 		for(var i=0; i<slider.length; i++){
 
-		//	console.log(i);
-			if(i>mid){
-				//console.log(i, 'greater');
-			//	slider[i].opacity = (i, mid);
-			//console.log(i, mid, 'greater');
-			//	console.log(slider[i].opacity, 'greater');
-			}
-			if(i<mid){
-			//	console.log(i, 'less');
-			//	slider[i].opacity = (i + mid);
-			//	console.log(slider[i].opacity, 'less');
-
-			//console.log(i, mid, 'less');
-			}
-			
-		//	console.log(Math.abs(mid - i));
 			var abs = Math.abs(mid - i);
-		//	console.log(abs);
 			var opac = 1 - ((abs * 0.28) + 0.35);
-			
-			console.log(height);
 			var maxHeight = (slider.length * 33);
 			var height = maxHeight - (abs * 20);
-			//var use = 1 - opac;
-		//	console.log(use);
+
 			slider[i].opacity = opac;
 			slider[i].height = height;
 
-			//console.log(abs);
-			//console.log(abs(mid - i));
-		//	slider[i].opacity = i * 0.10 + 0.045;
-
 		}
-		
-
 	}
 };
 
-opacity.init();
+picDimensions.init();
 
 
 setX.init();

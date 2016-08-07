@@ -43,9 +43,11 @@ body {
 
 .sliderImg {
 	height: 150px;
-	width: auto
+	width: auto;
 	margin-top: 25px;
 }
 
-
+.selectedImg {
+	border: 5px solid maroon;
+}
 
