@@ -1,0 +1,154 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+	font-family: Open Sans;
+	text-align: center;
+	vertical-align: middle;
+    list-style-type: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: white;
+	visited: #ccc;
+}
+
+.shade {
+	background-color: rgba(0,0,0,0.6);
+	height: 100vh;
+	width: 100vw;
+}
+
+.splash {
+	background: url(..//img/bar.jpg) no-repeat fixed;
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+}
+
+.logo {
+	height: 250px;
+	width: 250px;
+	margin-top: 15vh;
+	left: 40vw;
+	border-radius: 100%;
+	border: 4px solid white;
+	position: fixed;
+	z-index: 5;
+}
+
+.nav-div {
+	margin-top: 65vh;
+	background-color: rgba(0,0,0,0.7);
+	border: 1px solid tan;
+	position: fixed;
+	width: 100vw;
+}
+
+.hamburger {
+	cursor: pointer;
+	margin: 0;
+	color: white;
+}
+
+.ham-div {
+	display: none;
+	width: 100vw;
+	height: 30px;
+	background-color: rgba(103,0,0,0.6);
+	border-bottom: 2px solid tan;
+		padding-bottom: 35px;
+}
+
+.nav-li {
+	display: inline-block;
+	cursor: pointer;
+	font-size: 27px;
+	padding: 2%;
+	color: white;
+}
+
+.test {
+	height: 100vh;
+	width: 100vw;
+	background-color: #ccc;
+}
+
+.square-info {
+	background-color: rgba(0,0,0,0.8);
+	position: absolute;
+	z-index: 5;
+	top: 10vh;
+	left: 80vw;
+	width: 15vw;
+	color: white;
+	font-weight: lighter;
+	cursor: pointer;
+}
+
+.square-harrigans {
+	display: none;
+}
+
+.address {
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+	width: 30vw;
+	margin: auto auto 40vw auto;
+	position: fixed;
+}
+
+.address-ul {
+	padding-left: 0;
+	border: 1px solid tan;
+}
+
+.info {
+	color: white;
+	height: 95vh;
+	width: 100vw;
+	padding-top: 15vh;
+	padding-left: 15vw;
+	padding-right: 15vw;
+	display: none;
+	position: absolute;
+}
+
+.more-info {
+	display: none;
+}
+
+.info-par {
+	padding-left: 7.5vw;
+	padding-right: 7.5vw;
+	font-size: 18px;
+}
+
+.directions-href {
+	font-size: 25px;
+}
+
+.tavern {
+	height: 300px;
+	width: 350px;
+	margin-top: 20px;
+}
+
+.add-info-ul {
+	padding-left: 0;
+}
+
+.specials-ul {
+	display: inline-block;
+}
+
+.lead-li {
+	font-size: 18px;
+	font-weight: bold;
+}
+

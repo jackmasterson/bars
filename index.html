@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lan = "en">
+
+<head>
+	<title>Jack's Tavern</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset = "utf-8">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+		<div class="splash">
+			<div class="ham-div">
+				<h2 class="hamburger" data-bind="click: toggle.nav">Home</h2>
+			</div>
+			<div class="nav-div">
+				<ul class="nav-ul" data-bind="foreach: model.nav">
+					<li class="nav-li" data-bind="text: header, click: toggle.navigate"></li>
+				</ul>
+			</div>
+			<div class="info shade" data-bind="foreach: model.nav">
+				<div class="more-info" data-bind="attr: { id: classed }">
+					<div data-bind="if: description">
+					
+						<h1 class="info-head" data-bind="text: description"></h1>
+						<p class="info-par" data-bind="if: subDescription"><span data-bind="text: subDescription"></span></p>
+						<div data-bind="if: specials">
+							<div data-bind="foreach: specials">
+								<ul class="specials-ul">
+									<li class="lead-li" data-bind="text: day"></li>
+									<li data-bind="text: special"></li>
+									<li data-bind="text: price"></li>
+									<li data-bind="text: time"></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div data-bind="if: href">
+						<a class="directions-href" target="_blank" data-bind="attr: {href: href}, text: header"></a>
+						<br>
+						<img class="tavern" src="img/tavern.jpg">
+						<ul class="add-info-ul" data-bind="foreach: model.addInfo">
+							<li data-bind="text: address"></li>
+							<li data-bind="text: town"></li>
+						</ul>
+					</div>
+					<div data-bind="foreach: model.fourSqInfo">
+						<h1>
+							<a target="_blank" data-bind="attr: { href: Menu }, text: 'Menu'"></a>
+						</h1>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+	
+	<script src="js/lib/knockout-3.2.0.js"></script>
+	<script src="js/lib/jquery-1.12.4.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
