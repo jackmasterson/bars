@@ -25,7 +25,8 @@ var shifted = {
 
 	left: function() {
 		var classy = document.getElementsByClassName(slider[mid].classed)[0];
-		$(classy).removeClass('selectedImg');
+
+		
 
 		if(mid < slider.length - 1){
 			mid = mid + 1;
@@ -33,10 +34,16 @@ var shifted = {
 		else {
 			mid = 0;
 		}
+		$(classy).fadeOut(function(){
+			$(classy).removeClass('selectedImg');
+			classy = document.getElementsByClassName(slider[mid].classed)[0];
+			$(classy).addClass('selectedImg');
+			$(classy).fadeIn('slow');
+			
+		
+		});
 	
-		classy = document.getElementsByClassName(slider[mid].classed)[0];
-	
-		$(classy).addClass('selectedImg');
+		setTimeout(shifted.left, 2000);
 
 	},
 
@@ -49,7 +56,7 @@ var shifted = {
 			mid = slider.length - 1;
 		}
 
-		var classy = document.getElementsByClassName(slider[mid].classed)[0];
+		classy = document.getElementsByClassName(slider[mid].classed)[0];
 		$(classy).addClass('selectedImg');
 	}
 };
@@ -65,8 +72,14 @@ var setX = {
 	}
 };
 
+
 setX.init();
-	//setTimeout(shifted, 2000);
-	
+
+
+	//setTimeout(shifted.left, 0);
+	$(document).ready(function() {
+		shifted.left();
+	})
+//	
 
 ko.applyBindings();

@@ -46,12 +46,12 @@ body {
 	width: 150px;
 	opacity: 0.25;
 	margin-top: 25px;
+	display: none;
 }
 
 .selectedImg {
 	height: 250px;
 	width: 250px;
 	opacity: 1;
-	display: inline;
 }
 
