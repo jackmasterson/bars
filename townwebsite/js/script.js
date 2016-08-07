@@ -36,10 +36,8 @@ var shifted = {
 		classy = document.getElementsByClassName(slider[mid].classed)[0];
 		$(classy).addClass('selectedImg');
 
+	//	console.log(slider.indexOf(slider[mid]));
 	//	setTimeout(shifted.left, 2000);
-
-		
-
 		
 	},
 
@@ -54,17 +52,8 @@ var shifted = {
 
 		classy = document.getElementsByClassName(slider[mid].classed)[0];
 		$(classy).addClass('selectedImg');
-	}
-};
+		$(classy).css('opacity', 1);
 
-var setX = {
-
-	init: function() {
-		$(document).ready(function() {
-	//		console.log($('.sliderImg'));
-
-		})
-		
 	}
 };
 
@@ -88,14 +77,5 @@ var picDimensions = {
 
 picDimensions.init();
 
-
-setX.init();
-
-
-	//setTimeout(shifted.left, 0);
-	$(document).ready(function() {
-//		shifted.left();
-	})
-//	
 
 ko.applyBindings();
